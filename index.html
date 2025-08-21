@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sample in dannoomote</title>
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced To-Do List</title>
+    <!-- ↓↓↓ ここのパスを修正しました！ ↓↓↓ -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>My To-Do List</h1>
+      <form id="todo-form">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Add a new task..."
+          autocomplete="off"
+        />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <!-- ↓↓↓ ここから画像ギャラリーを追加 ↓↓↓ -->
+    <div class="gallery-container">
+        <h2>My Gallery</h2>
+        <div class="gallery">
+            
+            <!-- 画像とコメントのセット1 -->
+            <div class="gallery-item">
+                <!-- ご自身の画像ファイル名に書き換えてください -->
+                <img src="images/sakuhin1.jpg" alt="作品1の説明">
+                <p>ここに作品1の一言コメント</p>
+            </div>
+            
+            <!-- 画像とコメントのセット2 -->
+            <div class="gallery-item">
+                <!-- ご自身の画像ファイル名に書き換えてください -->
+                <img src="images/sakuhin2.png" alt="作品2の説明">
+                <p>ここに作品2の一言コメント。</p>
+            </div>
+            
+            <!-- 画像を増やしたい場合は、この部分をコピーして使ってください -->
+
+        </div>
+    </div>
+
+
+    <!-- ↓↓↓ ここのパスも修正しました！ ↓↓↓ -->
     <script src="js/app.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <header>
-        <h1>yaml sample</h1>
-        <a href="https://example.com" class="link-box" target="_blank" rel="noopener noreferrer">
-            外部リンクはこちら
-        </a>
-    </header>
-
-    <div class="tabs-container">
-        <button class="tab-button active" data-category="all">すべて</button>
-        <button class="tab-button" data-category="nature">自然</button>
-        <button class="tab-button" data-category="city">都市</button>
-        <button class="tab-button" data-category="animal">動物</button>
-    </div>
-
-    <main class="gallery-container">
-        <!-- 自然 カテゴリ -->
-        <img src="https://picsum.photos/id/10/600/600" alt="自然の画像1" class="gallery-item" data-category="nature">
-        <img src="https://picsum.photos/id/11/600/600" alt="自然の画像2" class="gallery-item" data-category="nature">
-        <img src="https://picsum.photos/id/12/600/600" alt="自然の画像3" class="gallery-item" data-category="nature">
-        
-        <!-- 都市 カテゴリ -->
-        <img src="https://picsum.photos/id/20/600/600" alt="都市の画像1" class="gallery-item" data-category="city">
-        <img src="https://picsum.photos/id/21/600/600" alt="都市の画像2" class="gallery-item" data-category="city">
-        <img src="https://picsum.photos/id/22/600/600" alt="都市の画像3" class="gallery-item" data-category="city">
-        <img src="https://picsum.photos/id/23/600/600" alt="都市の画像4" class="gallery-item" data-category="city">
-
-        <!-- 動物 カテゴリ -->
-        <img src="https://picsum.photos/id/217/600/600" alt="動物の画像1" class="gallery-item" data-category="animal">
-        <img src="https://picsum.photos/id/237/600/600" alt="動物の画像2" class="gallery-item" data-category="animal">
-        <img src="https://picsum.photos/id/433/600/600" alt="動物の画像3" class="gallery-item" data-category="animal">
-        <img src="https://picsum.photos/id/582/600/600" alt="動物の画像4" class="gallery-item" data-category="animal">
-        <img src="https://picsum.photos/id/593/600/600" alt="動物の画像5" class="gallery-item" data-category="animal">
-    </main>
-
-    <!-- 画像拡大表示用のモーダル -->
-    <div id="modal" class="modal-overlay">
-        <span class="close-button">&times;</span>
-        <img class="modal-content" id="modal-image">
-    </div>
-
-    <script src="script.js"></script>
-</body>
+  </body>
 </html>
